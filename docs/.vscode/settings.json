@@ -1,0 +1,121 @@
+{
+  // Avoid polluting search results
+  "search.exclude": {
+    "pnpm-lock.yaml": true,
+    "node_modules/": true,
+    "public/": true
+  },
+
+  // Ensure VSCode uses pnpm instead of npm
+  "npm.packageManager": "pnpm",
+
+  // Tailwind
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  // Better Todo Tree
+  "better-todo-tree.general.tags": ["TODO", "NOTE", "LEARN", "FIXME", "BUG", "[ ]", "[x]"],
+  "better-todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "background": "#FFFF00",
+      "iconColour": "#FFFF00"
+    },
+    "NOTE": {
+      "icon": "note",
+      "background": "#6495ED",
+      "iconColour": "#6495ED"
+    },
+    "LEARN": {
+      "icon": "note",
+      "background": "#FF69B4",
+      "iconColour": "#FF69B4"
+    },
+    "FIXME": {
+      "background": "#DEB887",
+      "iconColour": "#DEB887"
+    },
+    "BUG": {
+      "background": "#DC143C",
+      "iconColour": "#DC143C"
+    },
+    "[ ]": {
+      "icon": "check",
+      "background": "#FFFFFF",
+      "iconColour": "#FFFF00"
+    },
+    "[x]": {
+      "icon": "check",
+      "background": "#008000",
+      "iconColour": "#008000"
+    }
+  },
+  "better-todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "tag",
+    "opacity": 0,
+    "iconColour": "#0000FF",
+    "gutterIcon": true
+  },
+  "better-todo-tree.tree.scanMode": "workspace only",
+  "better-todo-tree.tree.showBadges": true,
+  "better-todo-tree.regex.regex": "(\\*|//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*@($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+  "better-todo-tree.regex.regexCaseSensitive": false,
+  "better-todo-tree.general.tagGroups": {},
+
+  // Typescript
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+
+  // Vite Plus
+  "npm.scriptRunner": "vp",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "[html]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[yaml]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[github-actions-workflow]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[tailwindcss]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "oxc.fmt.configPath": "./vite.config.ts",
+
+  // Format on save
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+
+  // File nesting
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
+    "composer.json": ".php*.cache, artisan, composer.lock, .editorconfig, phpstan.neon, phpunit.xml*, psalm*.xml",
+    "Dockerfile": "*.dockerfile, .devcontainer.*, .dockerignore, Dockerfile*, captain-definition, compose.*, docker-compose.*, dockerfile*",
+    "package.json": ".cspell*, components.json, cspell*, pnpm-*.yaml",
+    "README*": "AUTHORS, Authors, BACKERS*, Backers*, CHANGELOG*, CITATION*, CODEOWNERS, CODE_OF_CONDUCT*, CONTRIBUTING*, CONTRIBUTORS, CONTRIBUTORS.MD, CONTRIBUTORS.TXT, COPYING*, CREDITS, Changelog*, Citation*, Code_Of_Conduct*, Codeowners, Contributing*, Contributors, Contributors.md, Contributors.txt, Copying*, Credits, GOVERNANCE.MD, Governance.md, HISTORY.MD, History.md, LICENSE, LICENSE.MD, LICENSE.txt, License, License.md, License.txt, MAINTAINERS, Maintainers, README-*, README_*, RELEASE_NOTES*, ROADMAP.MD, Readme-*, Readme_*, Release_Notes*, Roadmap.md, SECURITY.MD, SPONSORS*, Security.md, Sponsors*, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, contributors.md, contributors.txt, copying*, credits, governance.md, history.md, license, license.md, license.txt, maintainers, readme-*, readme_*, release_notes*, roadmap.md, security.md, sponsors*",
+    "*.ts": "$(capture).js, $(capture).d.ts.map, $(capture).*.ts, $(capture)_*.js, $(capture)_*.ts",
+    "*.tsx": "$(capture).ts, $(capture).*.ts, $(capture).*.tsx, $(capture)_*.ts, $(capture)_*.tsx, $(capture).css, $(capture).module.css, $(capture).less, $(capture).module.less, $(capture).module.less.d.ts, $(capture).scss, $(capture).module.scss, $(capture).module.scss.d.ts, $(capture).css.ts",
+    "vite.config.*": "cypress.config.*, i18next.config.*, playwright.config.*, tsconfig.json, vitest.config.*"
+  },
+
+  // Dictionary
+  "cSpell.words": [
+    "colorspace",
+    "gltf",
+    "gsap",
+    "Lato",
+    "Noto",
+    "Segoe",
+    "smoothstep",
+    "threejs",
+    "tonemapping",
+    "Varyings",
+    "webgl"
+  ]
+}
