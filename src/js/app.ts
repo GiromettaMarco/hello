@@ -176,11 +176,8 @@ gltfLoader.load('./models.glb', (gltf) => {
   }
 
   particles.geometry.setAttribute('position', particles.positions[particles.index])
-  particles.geometry.setAttribute('aPositionTarget', particles.positions[2])
-  // particles.geometry.setAttribute('aPositionTarget', particles.positions[3])
+  particles.geometry.setAttribute('aPositionTarget', particles.positions[0])
   particles.geometry.setAttribute('aSize', new THREE.BufferAttribute(sizesArray, 1))
-  // vertices are unique because we used smooth function with blender
-  // particles.geometry.setIndex(null)
 
   //Points
   particles.points = new THREE.Points(particles.geometry, particles.material)
