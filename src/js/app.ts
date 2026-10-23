@@ -2,7 +2,6 @@ import fragmentShader from '$/particles/fragment.glsl'
 import vertexShader from '$/particles/vertex.glsl'
 import gsap from 'gsap'
 import * as THREE from 'three'
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import type { LoadedModel, Sizes } from '@/types'
 
@@ -39,7 +38,7 @@ export class Particles {
         uResolution: new THREE.Uniform(
           new THREE.Vector2(sizes.width * sizes.pixelRatio, sizes.height * sizes.pixelRatio)
         ),
-        uSize: new THREE.Uniform(0.4),
+        uSize: new THREE.Uniform(0.6),
         uTime: new THREE.Uniform(0)
       },
       vertexShader: vertexShader
@@ -82,10 +81,7 @@ const canvas = document.querySelector('canvas.webgl') as HTMLElement
 const scene = new THREE.Scene()
 
 // Loaders
-const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('./draco/')
 const gltfLoader = new GLTFLoader()
-gltfLoader.setDRACOLoader(dracoLoader)
 
 // Handle window size
 const sizes: Sizes = {
