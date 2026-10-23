@@ -71,7 +71,6 @@
   // Vite Plus
   "npm.scriptRunner": "vp",
   "editor.defaultFormatter": "oxc.oxc-vscode",
-  "[html]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
@@ -82,6 +81,14 @@
   "[tailwindcss]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "oxc.fmt.configPath": "./vite.config.ts",
+
+  // HTML formatting
+  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
+  "html.format.indentInnerHtml": true,
+  "html.format.extraLiners": "",
+
+  // Final new line
+  "files.insertFinalNewline": true,
 
   // Format on save
   "editor.formatOnSave": true,

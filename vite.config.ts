@@ -5,15 +5,7 @@ import { defineConfig } from 'vite-plus'
 export default defineConfig({
   fmt: {
     htmlWhitespaceSensitivity: 'css',
-    ignorePatterns: ['pnpm-lock.yaml', 'public'],
-    overrides: [
-      {
-        files: ['*.html'],
-        options: {
-          singleAttributePerLine: false
-        }
-      }
-    ],
+    ignorePatterns: ['pnpm-lock.yaml', 'public', 'index.html'],
     printWidth: 100,
     semi: false,
     singleAttributePerLine: true,
@@ -25,9 +17,6 @@ export default defineConfig({
     },
     sortPackageJson: {
       sortScripts: true
-    },
-    sortTailwindcss: {
-      stylesheet: './src/css/style.css'
     },
     tabWidth: 2,
     trailingComma: 'none'
