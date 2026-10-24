@@ -32,11 +32,23 @@ body,
 
 a {
   color: var(--color-link);
-  transition: color 600ms ease;
+  outline-color: var(--color-link);
+  transition:
+    color 600ms ease,
+    outline-color 600ms ease;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
   color: var(--color-link-hover);
+}
+
+a:focus-visible {
+  outline-color: var(--color-link-hover);
+  outline-offset: 0.125rem;
+  outline-style: solid;
+  outline-width: 0.125rem;
+  border-radius: 0.125rem;
 }
 
 a .ext-icon {
@@ -60,7 +72,8 @@ a .github-icon {
     display: block;
   }
 
-  a:hover .ext-icon {
+  a:hover .ext-icon,
+  a:focus-visible .ext-icon {
     color: var(--color-link-hover);
     opacity: 1;
   }
@@ -96,4 +109,18 @@ a .github-icon {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.stack-trigger {
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.stack-trigger:focus-visible {
+  outline-color: var(--color-link-hover);
+  outline-offset: 0.25rem;
+  outline-style: solid;
+  outline-width: 0.125rem;
+  border-radius: 0.125rem;
 }

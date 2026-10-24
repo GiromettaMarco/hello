@@ -20,11 +20,11 @@
     <main class="relative z-10 h-full bg-transparent text-white">
       <div class="fade-in absolute p-8 sm:top-1/12 md:left-1/10 md:w-136 lg:top-1/6 lg:left-1/6">
         <div class="rounded-2xl bg-black/50 p-4 lg:p-8">
-          <a class="relative flex gap-2 text-2xl font-bold md:text-3xl lg:text-4xl"
-            href="https://github.com/GiromettaMarco" target="_blank" title="Link to my GitHub profile">
+          <a class="relative gap-2 text-2xl font-bold md:text-3xl lg:text-4xl" href="https://github.com/GiromettaMarco"
+            target="_blank" title="Link to my GitHub profile">
             Marco Girometta
-            <svg class="ext-icon github-icon" fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" class="ext-icon github-icon" fill="currentColor" height="24" viewBox="0 0 24 24"
+              width="24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z">
               </path>
@@ -39,10 +39,11 @@
             <span class="text-gray-500">(<span id="click-text">click</span> one)</span>
           </p>
           <ul class="mt-4 flex gap-6">
-            <li class="size-10 overflow-hidden">
-              <button class="cursor-pointer" id="laravel-trigger" type="button">
+            <li>
+              <button class="stack-trigger" id="laravel-trigger" type="button">
                 <span class="sr-only">Laravel</span>
-                <svg version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="size-10">
+                <svg aria-label="Laravel icon" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                  class="size-10">
                   <path clip-rule="evenodd"
                     d="M63,14.5c0,0.1,0,0.2,0,0.3v13.7c0,0.4-0.2,0.7-0.5,0.9L51.1,36v13.2c0,0.4-0.2,0.7-0.5,0.9L26.5,63.9 c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0-0.1,0c-0.2,0-0.3,0-0.5,0c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2-0.1L1.4,50c-0.3-0.2-0.5-0.5-0.5-0.9 V7.9c0-0.1,0-0.2,0-0.3c0,0,0-0.1,0-0.1C1,7.5,1,7.5,1,7.4c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1 c0,0,0.1-0.1,0.1-0.1l12-6.9c0.3-0.2,0.7-0.2,1,0l12,6.9c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0.1c0,0,0.1,0.1,0.1,0.1 c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.2c0,0,0,0.1,0,0.1c0,0.1,0,0.2,0,0.3v25.7l10-5.8V14.7c0-0.1,0-0.2,0-0.3c0,0,0-0.1,0-0.1 c0-0.1,0-0.1,0.1-0.2c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1l12-6.9c0.3-0.2,0.7-0.2,1,0 l12,6.9c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1C63,14.3,63,14.3,63,14.5 C63,14.4,63,14.4,63,14.5z M61.1,27.9V16.5l-4.2,2.4l-5.8,3.3v11.4C51.1,33.7,61.1,27.9,61.1,27.9z M49,48.6V37.1l-5.7,3.3L27,49.7 v11.5C27,61.3,49,48.6,49,48.6z M2.9,9.7v38.9L25,61.3V49.7l-11.5-6.5l0,0l0,0c0,0-0.1-0.1-0.1-0.1c0,0-0.1,0-0.1-0.1l0,0 c0,0-0.1-0.1-0.1-0.1c0,0-0.1-0.1-0.1-0.1l0,0c0,0,0-0.1-0.1-0.1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1V15.4l-5.8-3.3 C7.1,12.1,2.9,9.7,2.9,9.7z M14,2.2l-10,5.8l10,5.8l10-5.8L14,2.2L14,2.2z M19.2,38.2l5.8-3.3V9.7l-4.2,2.4L15,15.4v25.2 C15,40.6,19.2,38.2,19.2,38.2z M50,9l-10,5.8l10,5.8l10-5.8L50,9z M49,22.2l-5.8-3.3L39,16.5v11.4l5.8,3.3l4.2,2.4V22.2z M26,48 l14.7-8.4l7.3-4.2l-10-5.8l-11.5,6.6L16,42.3C16,42.3,26,48,26,48z"
                     fill="#FF2D20" fill-rule="evenodd" />
@@ -50,11 +51,11 @@
               </button>
             </li>
 
-            <li class="size-10 overflow-hidden">
-              <button class="cursor-pointer" id="react-trigger" type="button">
+            <li>
+              <button class="stack-trigger" id="react-trigger" type="button">
                 <span class="sr-only">React</span>
-                <svg height="512px" version="1.1" viewBox="0 0 569 512" width="569px" xmlns="http://www.w3.org/2000/svg"
-                  class="size-10">
+                <svg aria-label="React icon" height="512px" version="1.1" viewBox="0 0 569 512" width="569px"
+                  xmlns="http://www.w3.org/2000/svg" class="size-10">
                   <g>
                     <g class="fill-[#087EA4] dark:fill-[#58C4DC]">
                       <path
@@ -67,11 +68,11 @@
               </button>
             </li>
 
-            <li class="size-10 overflow-hidden">
-              <button class="cursor-pointer" id="vite-trigger" type="button">
+            <li>
+              <button class="stack-trigger" id="vite-trigger" type="button">
                 <span class="sr-only">Vite Plus</span>
-                <svg fill="none" height="404" viewBox="0 0 410 404" width="410" xmlns="http://www.w3.org/2000/svg"
-                  class="size-10">
+                <svg aria-label="Vite Plus icon" fill="none" height="404" viewBox="0 0 410 404" width="410"
+                  xmlns="http://www.w3.org/2000/svg" class="size-10">
                   <defs>
                     <linearGradient gradientUnits="userSpaceOnUse" id="vite-gradient-a" x1="6.00017" x2="235"
                       y1="32.9999" y2="344">
@@ -101,11 +102,12 @@
           <div class="fade-in-top hidden rounded-2xl bg-black/50 p-4 data-[active=true]:block lg:p-8"
             id="laravel-content">
             <h2 class="mb-2 text-2xl font-bold">
-              <a class="relative" href="https://laravel.com/" target="_blank" title="Laravel homepage">
+              <a aria-label="Open Laravel" class="relative" href="https://laravel.com/" target="_blank"
+                title="Laravel homepage">
                 Laravel
-                <svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-external-link preview-icon">
+                <svg aria-hidden="true" class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
                   <path d="M15 3h6v6" />
                   <path d="M10 14 21 3" />
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -122,9 +124,9 @@
             <h2 class="mb-2 text-2xl font-bold">
               <a class="relative" href="https://react.dev/" target="_blank" title="React homepage">
                 React
-                <svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-external-link preview-icon">
+                <svg aria-hidden="true" class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
                   <path d="M15 3h6v6" />
                   <path d="M10 14 21 3" />
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -142,9 +144,9 @@
             <h2 class="mb-2 text-2xl font-bold ">
               <a class="relative" href="https://viteplus.dev/" target="_blank" title="Vite+ homepage">
                 Vite+
-                <svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-external-link preview-icon">
+                <svg aria-hidden="true" class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-external-link preview-icon">
                   <path d="M15 3h6v6" />
                   <path d="M10 14 21 3" />
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
