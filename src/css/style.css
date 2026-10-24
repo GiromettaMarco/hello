@@ -6,6 +6,16 @@
     'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+@theme inline {
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+}
+
+:root {
+  --link: #41d1ff;
+  --link-hover: #bd34fe;
+}
+
 html,
 body,
 #app {
@@ -18,6 +28,42 @@ body,
   top: 0;
   left: 0;
   outline: none;
+}
+
+a {
+  color: var(--color-link);
+  transition: color 600ms ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a .ext-icon {
+  display: none;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.125rem;
+  left: -2rem;
+  color: var(--color-link);
+  opacity: 0;
+  transition: all 600ms ease;
+}
+
+a .github-icon {
+  top: 0.625rem;
+}
+
+@media (width >= 64rem /* 1024px */) {
+  a .ext-icon {
+    display: block;
+  }
+
+  a:hover .ext-icon {
+    color: var(--color-link-hover);
+    opacity: 1;
+  }
 }
 
 .fade-in {
