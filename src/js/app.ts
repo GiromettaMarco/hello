@@ -75,7 +75,7 @@ export class Particles {
 //#region three.js
 
 // Canvas
-const canvas = document.querySelector('canvas.webgl') as HTMLElement
+const canvas = document.querySelector('canvas#webgl') as HTMLElement
 
 // Scene
 const scene = new THREE.Scene()
@@ -262,3 +262,11 @@ function choose(index: number) {
 for (let i = 0; i < UI.length; i++) {
   UI[i].trigger.onclick = () => choose(i + 1)
 }
+
+//#region Cursor Overlay
+
+const cursorOverlay = document.getElementById('cursor-overlay') as HTMLElement
+
+window.addEventListener('mousemove', (event) => {
+  cursorOverlay.style.background = `radial-gradient(${sizes.width / 3}px at ${event.clientX}px ${event.clientY}px, rgba(78, 12, 109, 0.15), transparent 80%)`
+})
