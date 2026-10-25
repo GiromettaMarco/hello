@@ -7,11 +7,13 @@
 }
 
 @theme inline {
+  --color-primary: var(--primary);
   --color-link: var(--link);
   --color-link-hover: var(--link-hover);
 }
 
 :root {
+  --primary: #ffffff;
   --link: #41d1ff;
   --link-hover: #bd34fe;
 }
@@ -141,4 +143,17 @@ a .github-icon {
   outline-style: solid;
   outline-width: 0.125rem;
   border-radius: 0.125rem;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  background-color: rgb(255 255 255 / 0.01);
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+  color: var(--color-primary);
+  text-align: center;
+  padding: 0.5rem 0;
 }
