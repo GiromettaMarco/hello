@@ -8,9 +8,7 @@
     "prepare": "vp config"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.3",
     "gsap": "^3.15.0",
-    "tailwindcss": "^4.3.3",
     "three": "^0.186.1"
   },
   "devDependencies": {
@@ -19,6 +17,7 @@
     "typescript": "~6.0.2",
     "vite": "catalog:",
     "vite-plugin-glsl": "^1.6.2",
+    "vite-plugin-inline-source": "^5.0.0",
     "vite-plus": "catalog:"
   },
   "devEngines": {

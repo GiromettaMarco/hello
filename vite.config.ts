@@ -1,5 +1,5 @@
-import tailwindcss from '@tailwindcss/vite'
 import glsl from 'vite-plugin-glsl'
+import inlineSource from 'vite-plugin-inline-source'
 import { defineConfig } from 'vite-plus'
 
 export default defineConfig({
@@ -68,7 +68,7 @@ export default defineConfig({
       'vite-plus/prefer-vite-plus-imports': 'error'
     }
   },
-  plugins: [tailwindcss(), glsl()],
+  plugins: [glsl(), inlineSource()],
   resolve: {
     tsconfigPaths: true
   },

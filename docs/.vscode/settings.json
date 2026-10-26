@@ -9,11 +9,6 @@
   // Ensure VSCode uses pnpm instead of npm
   "npm.packageManager": "pnpm",
 
-  // Tailwind
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-
   // Better Todo Tree
   "better-todo-tree.general.tags": ["TODO", "NOTE", "LEARN", "FIXME", "BUG", "[ ]", "[x]"],
   "better-todo-tree.highlights.customHighlight": {
@@ -78,7 +73,7 @@
   "[jsonc]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[yaml]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[github-actions-workflow]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
-  "[tailwindcss]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[css]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "oxc.fmt.configPath": "./vite.config.ts",
 

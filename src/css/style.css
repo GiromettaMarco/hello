@@ -1,55 +1,120 @@
-@import 'tailwindcss';
+/**
+ * Table of contents
+ * 
+ * 1. Normalize
+ * 2. Colors
+ * 3. Typography
+ * 4. Anchors
+ * 5. Page
+ * 6. Components
+ * 7. Animations
+ * 8. Media Queries
+ *  8.1. 640px
+ *    8.1.5 Page
+ *  8.2. 768px
+ *    8.2.1. Typography
+ *    8.2.5. Page
+ *  8.3. 1024px
+ *    8.3.1. Typography
+ *    8.3.4. Anchors
+ *    8.3.5. Page
+ *    8.3.6. Components
+ *  8.4. Touch Screen
+ */
 
-@theme {
-  --font-sans:
-    'Lato', 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-@theme inline {
-  --color-primary: var(--primary);
-  --color-link: var(--link);
-  --color-link-hover: var(--link-hover);
-}
-
-:root {
-  --primary: #ffffff;
-  --link: #41d1ff;
-  --link-hover: #bd34fe;
+/**
+ * 1. Normalize
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
 }
 
 html,
-body,
-#app {
-  height: 100%;
-  background-color: #000000;
+:host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family:
+    'Lato', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
-#webgl {
-  position: fixed;
-  top: 0;
-  left: 0;
-  outline: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-#cursor-overlay {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  outline: none;
-  z-index: 10;
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
 }
 
-@media (pointer: coarse) {
-  #cursor-overlay {
-    display: none;
-  }
+:-moz-focusring {
+  outline: auto;
 }
 
+svg,
+canvas {
+  display: block;
+}
+
+button {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
+  appearance: button;
+}
+
+/**
+ * 2. Colors
+ */
+:root {
+  --color-background: #000000;
+  --color-primary: #ffffff;
+  --color-link: #41d1ff;
+  --color-link-hover: #bd34fe;
+  --color-muted: #6a7282;
+}
+
+/**
+ * 3. Typography
+ */
+.text-lg {
+  line-height: 1.4;
+  font-size: 1.25rem;
+}
+
+.text-xl {
+  line-height: 1.333333;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.text-2xl {
+  line-height: 1.333333;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/**
+ * 4. Anchors
+ */
 a {
   color: var(--color-link);
   outline-color: var(--color-link);
@@ -71,7 +136,11 @@ a:focus-visible {
   border-radius: 0.125rem;
 }
 
-a .ext-icon {
+.ext-container {
+  position: relative;
+}
+
+.ext-icon {
   display: none;
   position: absolute;
   width: 1.5rem;
@@ -83,22 +152,140 @@ a .ext-icon {
   transition: all 600ms ease;
 }
 
-a .github-icon {
+.github-icon {
   top: 0.625rem;
 }
 
-@media (width >= 64rem /* 1024px */) {
-  a .ext-icon {
-    display: block;
-  }
-
-  a:hover .ext-icon,
-  a:focus-visible .ext-icon {
-    color: var(--color-link-hover);
-    opacity: 1;
-  }
+/**
+ * 5. Page
+ */
+html,
+body {
+  height: 100%;
+  background-color: var(--color-background);
 }
 
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.cursor-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  z-index: 10;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main {
+  position: absolute;
+  z-index: 20;
+  padding: 2rem;
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-primary);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/**
+ * 6. Components
+ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.title {
+  margin-top: 0.25rem;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.stack-container {
+  margin-top: 4rem;
+}
+
+.stack-list {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stack-trigger {
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.stack-trigger svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.stack-trigger:focus-visible {
+  outline-color: var(--color-link-hover);
+  outline-offset: 0.25rem;
+  outline-style: solid;
+  outline-width: 0.125rem;
+  border-radius: 0.125rem;
+}
+
+.stack-text {
+  margin-top: 3rem;
+}
+
+.stack-item {
+  display: none;
+}
+
+.stack-item[data-active='true'] {
+  display: block;
+}
+
+.stack-item p {
+  margin-top: 0.5rem;
+}
+
+.stack-item a {
+  font-weight: 700;
+}
+
+/**
+ * 7. Animations
+ */
 .fade-in {
   animation-delay: 1s;
   animation-duration: 1s;
@@ -131,29 +318,81 @@ a .github-icon {
   }
 }
 
-.stack-trigger {
-  height: 2.5rem;
-  width: 2.5rem;
-  cursor: pointer;
+/**
+ * 8. Media Queries
+ *
+ * 8.1. 640px
+ */
+@media (width >= 40rem) {
+  /* 8.1.5. Page */
+  .main {
+    top: 8.333333%;
+  }
 }
 
-.stack-trigger:focus-visible {
-  outline-color: var(--color-link-hover);
-  outline-offset: 0.25rem;
-  outline-style: solid;
-  outline-width: 0.125rem;
-  border-radius: 0.125rem;
+/**
+ * 8.2. 768px
+ */
+@media (width >= 48rem) {
+  /* 8.2.1. Typography */
+  .text-2xl {
+    line-height: 1.2;
+    font-size: 1.875rem;
+  }
+
+  /* 8.2.5. Page */
+  .main {
+    left: 10%;
+    width: 34rem;
+  }
 }
 
-.footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 40;
-  background-color: rgb(255 255 255 / 0.01);
-  border-top: 1px solid rgb(255 255 255 / 0.1);
-  color: var(--color-primary);
-  text-align: center;
-  padding: 0.5rem 0;
+/**
+ * 8.3. 1024px
+ */
+@media (width >= 64rem) {
+  /* 8.3.1. Typography */
+  .text-2xl {
+    line-height: 1.111111;
+    font-size: 2.25rem;
+  }
+
+  /* 8.3.4. Anchors */
+  .ext-icon {
+    display: block;
+  }
+
+  .ext-container:hover .ext-icon,
+  .ext-container:focus-visible .ext-icon {
+    color: var(--color-link-hover);
+    opacity: 1;
+  }
+
+  /* 8.3.5. Page */
+  .main {
+    top: 16.666667%;
+    left: 16.666667%;
+  }
+
+  /* 8.3.6. Components */
+  .card {
+    padding: 2rem;
+  }
+
+  .stack-container {
+    margin-top: 2.5rem;
+  }
+
+  .stack-text {
+    margin-top: 2rem;
+  }
+}
+
+/**
+ * 8.4. Touch Screen
+ */
+@media (pointer: coarse) {
+  .cursor-overlay {
+    display: none;
+  }
 }
